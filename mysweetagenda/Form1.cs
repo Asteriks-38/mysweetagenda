@@ -44,12 +44,24 @@ namespace mysweetagenda
         {
             this.BackColor = Color.FromArgb(255, 207, 207);
             loginpanel.BackColor = Color.FromArgb(254, 239, 224);
+            loginBtn.BackColor = Color.FromArgb(204, 128, 132);
+            
         
         }
 
         private void loginMinus_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void loginBtn_MouseMove(object sender, MouseEventArgs e)
+        {
+            loginBtn.BackColor = Color.FromArgb(90, 134, 173);
+        }
+
+        private void loginBtn_MouseLeave(object sender, EventArgs e)
+        {
+            loginBtn.BackColor = Color.FromArgb(204, 128, 132);
         }
 
         private void loginpanel_MouseUp(object sender, MouseEventArgs e)

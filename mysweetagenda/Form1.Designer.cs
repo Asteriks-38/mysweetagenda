@@ -35,6 +35,9 @@ namespace mysweetagenda
             this.loginIcon = new System.Windows.Forms.PictureBox();
             this.loginMinus = new System.Windows.Forms.Button();
             this.loginLabel = new System.Windows.Forms.Label();
+            this.loginTextBox = new System.Windows.Forms.TextBox();
+            this.LoginUsernameLabel = new System.Windows.Forms.Label();
+            this.loginBtn = new System.Windows.Forms.Button();
             this.loginpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginIcon)).BeginInit();
             this.SuspendLayout();
@@ -98,11 +101,47 @@ namespace mysweetagenda
             // 
             this.loginLabel.AutoSize = true;
             this.loginLabel.Font = new System.Drawing.Font("Microsoft New Tai Lue", 25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.loginLabel.Location = new System.Drawing.Point(250, 52);
+            this.loginLabel.Location = new System.Drawing.Point(248, 146);
             this.loginLabel.Name = "loginLabel";
             this.loginLabel.Size = new System.Drawing.Size(292, 39);
             this.loginLabel.TabIndex = 2;
             this.loginLabel.Text = "My Sweet Agenda";
+            // 
+            // loginTextBox
+            // 
+            this.loginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.loginTextBox.Location = new System.Drawing.Point(298, 256);
+            this.loginTextBox.Multiline = true;
+            this.loginTextBox.Name = "loginTextBox";
+            this.loginTextBox.Size = new System.Drawing.Size(192, 26);
+            this.loginTextBox.TabIndex = 3;
+            this.loginTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoginUsernameLabel
+            // 
+            this.LoginUsernameLabel.AutoSize = true;
+            this.LoginUsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LoginUsernameLabel.Location = new System.Drawing.Point(348, 224);
+            this.LoginUsernameLabel.Name = "LoginUsernameLabel";
+            this.LoginUsernameLabel.Size = new System.Drawing.Size(93, 20);
+            this.LoginUsernameLabel.TabIndex = 4;
+            this.LoginUsernameLabel.Text = "Kullanıcı Adı";
+            // 
+            // loginBtn
+            // 
+            this.loginBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.loginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.loginBtn.FlatAppearance.BorderSize = 0;
+            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.loginBtn.Location = new System.Drawing.Point(352, 310);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(89, 29);
+            this.loginBtn.TabIndex = 5;
+            this.loginBtn.Text = "Giriş";
+            this.loginBtn.UseVisualStyleBackColor = false;
+            this.loginBtn.MouseLeave += new System.EventHandler(this.loginBtn_MouseLeave);
+            this.loginBtn.MouseMove += new System.Windows.Forms.MouseEventHandler(this.loginBtn_MouseMove);
             // 
             // login
             // 
@@ -111,6 +150,9 @@ namespace mysweetagenda
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(776, 517);
             this.ControlBox = false;
+            this.Controls.Add(this.loginBtn);
+            this.Controls.Add(this.LoginUsernameLabel);
+            this.Controls.Add(this.loginTextBox);
             this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.loginIcon);
             this.Controls.Add(this.loginpanel);
@@ -134,6 +176,9 @@ namespace mysweetagenda
         private System.Windows.Forms.PictureBox loginIcon;
         private System.Windows.Forms.Button loginMinus;
         private System.Windows.Forms.Label loginLabel;
+        private System.Windows.Forms.TextBox loginTextBox;
+        private System.Windows.Forms.Label LoginUsernameLabel;
+        private System.Windows.Forms.Button loginBtn;
     }
 }
 
